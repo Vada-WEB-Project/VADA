@@ -28,6 +28,7 @@
 	pageContext.setAttribute("list", list);
 %>
 
+
 <jsp:include page="top.jsp" />
 
 <style>
