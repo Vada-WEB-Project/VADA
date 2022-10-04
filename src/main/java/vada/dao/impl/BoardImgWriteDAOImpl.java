@@ -19,7 +19,7 @@ public class BoardImgWriteDAOImpl extends AbstractBoardImgDAO {
 
 		pstmt.setInt(1, imgproductnum);
 		pstmt.setInt(2, ImgDTO.getImgnum());
-		pstmt.setString(3, ImgDTO.getImgsname());
+		pstmt.setString(3, ImgDTO.getImgsname().substring(42));
 		pstmt.setInt(4, ImgDTO.getImgsize());
 		pstmt.setString(5, ImgDTO.getImgcname());
 

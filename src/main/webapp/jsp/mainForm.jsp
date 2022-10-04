@@ -7,7 +7,7 @@
 <%@ page import="vada.dto.BoardDTO"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="java.util.HashMap"%>
-<%@ page import="java.util.Map"%>
+<%@ page import="java.util	.Map"%>
 <%@ page import="vada.dao.impl.BoardListDAOImpl"%>
 <%@ page import="vada.service.BoardListService"%>
 
@@ -244,7 +244,7 @@ main {
 			
 				<li id="listid" class="cell">
 					<div class="img-box">
-						<img class=imgfile src="${item.imgsname}" alt="">
+ 						<img class=imgfile src="../${item.imgsname}" alt="">
 					</div>
 					<div id="productnum" class="product-name">${item.productnum}</div>
 					<div class="product-price">
