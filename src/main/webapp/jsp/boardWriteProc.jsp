@@ -16,8 +16,8 @@
 <jsp:useBean id="boardDTO" class="vada.dto.BoardDTO" />
 <jsp:setProperty name="boardDTO" property="*" />
 
-<jsp:setProperty name="boardDTO" property="buyerid" value="testid1" /><% // TODO 이거는 게시글 판매 완료 처리되면 작성 %>
-<jsp:setProperty name="boardDTO" property="sellerid" value="testid2" /> <% // TODO session 으로 받아온 로그인 사용자 아이디 넣어주면됨 %>
+<jsp:setProperty name="boardDTO" property="buyerid" value="testid" /><% // TODO 이거는 게시글 판매 완료 처리되면 작성 %>
+<jsp:setProperty name="boardDTO" property="sellerid" value="testid1" /> <% // TODO session 으로 받아온 로그인 사용자 아이디 넣어주면됨 %>
 <jsp:setProperty name="boardDTO" property="bcategorynum" value="102" /> <% // TODO 카테고리 번호 가져와야함 %>
 
 <%
