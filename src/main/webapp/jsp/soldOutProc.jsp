@@ -19,7 +19,6 @@
 		System.out.println("실패");
 	}
 	
-	response.sendRedirect("mainForm.jsp");
 	
 %>
 

@@ -146,10 +146,11 @@ label:before {
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><a class="dropdown-item" href="/Vada/jsp/">My Page</a></li>
+                        <li><a class="dropdown-item" href="/Vada/jsp/likeListForm.jsp">구매 목록</a></li>
+                        <li><a class="dropdown-item" href="/Vada/jsp/likeListForm.jsp">찜 목록</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                        <li><a class="dropdown-item" href="#!">로그아웃</a></li>
                     </ul>
                 </li>
             </ul>
@@ -164,7 +165,7 @@ label:before {
                                 <div class="sb-nav-link-icon"></div>
                                 중고거래
                             </a>
-                              <a class="nav-link" href="index.html">
+                              <a class="nav-link" href="/Vada/jsp/chatList.jsp">
                                 <div class="sb-nav-link-icon"></div>
                                 채팅
                             </a>

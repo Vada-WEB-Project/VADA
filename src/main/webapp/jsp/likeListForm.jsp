@@ -1,5 +1,32 @@
+<%@page import="vada.dao.impl.LikeListDAOImpl"%>
+<%@page import="vada.service.LikeService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<%@ page import="vada.dto.ProductpriceDTO"%>
+<%@ page import="vada.dto.ImgDTO"%>
+<%@ page import="java.util.List"%>
+<%@ page import="vada.dto.BoardDTO"%>
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="java.util.HashMap"%>
+<%@ page import="java.util.Map"%>
+<%@ page import="vada.dao.impl.BoardListDAOImpl"%>
+<%@ page import="vada.service.BoardListService"%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
+
+<%
+	
+	// 게시글 출력
+	LikeService likeService = new LikeListDAOImpl();
+	
+	List<Map> list = likeService.likeList("testid3");
+	
+	pageContext.setAttribute("list", list);
+%>
+
 
 <jsp:include page="top.jsp" />
 
@@ -11,20 +38,31 @@
 html {
 	font-family: "Noto Sans KR", sans-serif;
 }
-/*노말라이즈*/
-body, ul, li {
+
+노말라이즈 
+ body, ul, li {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
-a {
-	text-decoration: none;
-	color: inherit;
+main {
+	margin-left: 20%;
 }
 
-/*라이브러리*/
-.con {
+#write {
+	text-decoration: none;
+	color: white;
+	text-style: bold;
+	display: block;
+	/*  	border: 1px solid gray; */
+	width: 200px;
+	text-align: center;
+	background: gray;
+}
+
+라이브러리 
+ .con {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -46,8 +84,9 @@ a {
 	width: 100%;
 	height: 300px;
 }
-/*커스텀*/
-html, body {
+
+커스텀 
+ html, body {
 	overflow-x: hidden;
 }
 
@@ -177,98 +216,54 @@ html, body {
 		width: calc(100%/ 2);
 	}
 }
+
+#write {
+	width: 80px;
+	height: 80px;
+	position: fixed;
+	text-align: center;
+	line-height: 80px;
+  	right: 0;
+  	bottom: 0;
+  	margin-bottom: 100px;
+  	margin-right: 60px;
+  	border-radius: 50%;
+}
 </style>
 
 <main>
 
 	<div class="list con">
 	
-		<ul class="row">
-		
-			<li class="cell">
-				<div class="img-box">
-					<img class=imgfile src="https://biz.chosun.com/resizer/thXh4NamvP6VYoPlBZL3ogokvP4=/616x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosunbiz/KRWGKWDOH5GR5N6DLEYILA6TLU.png" alt="" />
-				</div>
-				<div class="product-name">단가라 ops</div>
-				<div class="product-price">19800</div>
-				<div class="product-name">2022-02-01</div>
-			</li>
+		<ul class="row" id="test">
+
+			<c:set var="listSize" value="${list.size()}" />
+
+			<c:forEach var="item" items="${list}" varStatus="stat">
 			
-			<li class="cell">
-				<div class="img-box">
-					<img class=imgfile src="http://bnx.oa.gg/img/bnx_16fw_visual_02_list.jpg" alt="">
-				</div>
-				<div class="product-name">단가라 ops</div>
-				<div class="product-price">19800</div>
-				<div class="product-name">2022-02-01</div>
-			</li>
-			
-			<li class="cell">
-				<div class="img-box">
-					<img class=imgfile src="http://bnx.oa.gg/img/bnx_16fw_visual_03_list.jpg" alt="">
-				</div>
-				<div class="product-name">단가라 ops</div>
-				<div class="product-price">19800</div>
-				<div class="product-name">2022-02-01</div>
-			</li>
-			
-			<li class="cell">
-				<div class="img-box">
-					<img class=imgfile src="http://bnx.oa.gg/img/bnx_16fw_visual_04_list.jpg" alt="">
-				</div>
-				<div class="product-name">단가라 ops</div>
-				<div class="product-price">19800</div>
-				<div class="product-name">2022-02-01</div>
-			</li>
-			
-			<li class="cell">
-				<div class="img-box">
-					<img class=imgfile src="http://bnx.oa.gg/img/bnx_16fw_visual_05_list.jpg" alt="">
-				</div>
-				<div class="product-name">단가라 ops</div>
-				<div class="product-price">19800</div>
-				<div class="product-name">2022-02-01</div>
-			</li>
-			
-			<li class="cell">
-				<div class="img-box">
-					<img class=imgfile src="http://bnx.oa.gg/img/bnx_16fw_visual_06_list.jpg" alt="">
-				</div>
-				<div class="product-name">단가라 ops</div>
-				<div class="product-price">19800</div>
-				<div class="product-name">2022-02-01</div>
-			</li>
-			
-			<li class="cell">
-				<div class="img-box">
-					<img class=imgfile src="http://bnx.oa.gg/img/bnx_16fw_visual_07_list.jpg" alt="">
-				</div>
-				<div class="product-name">단가라 ops</div>
-				<div class="product-price">19800</div>
-				<div class="product-name">2022-02-01</div>
-			</li>
-			
-			<li class="cell">
-				<div class="img-box">
-					<img class=imgfile src="http://bnx.oa.gg/img/bnx_16fw_visual_08_list.jpg" alt="">
-				</div>
-				<div class="product-name">단가라 ops</div>
-				<div class="product-price">19800</div>
-				<div class="product-name">2022-02-01</div>
-			</li>
-			
-			<li class="cell">
-				<div class="img-box">
-					<img class=imgfile src="http://bnx.oa.gg/img/bnx_16fw_visual_09_list.jpg" alt="">
-				</div>
-				<div class="product-name">단가라 ops</div>
-				<div class="product-price">19800</div>
-				<div class="product-name">2022-02-01</div>
-			</li>
-			
+				<li id="listid" class="cell">
+					<div class="img-box">
+						<img class=imgfile src="${item.imgsname}" alt="">
+					</div>
+					<div id="productnum" class="product-name">${item.productnum}</div>
+					<div class="product-price">
+						<a href="/Vada/jsp/boardDetailForm.jsp?productnum=${item.productnum}">${item.title}</a>
+					</div> 
+					<c:set var="sysYear">
+						<fmt:formatDate value="${item.wdate}" pattern="yyyy-MM-dd hh:mm:ss" />
+					</c:set>
+					<div class="product-name">
+						<c:out value="${sysYear}" />
+					</div>
+				</li>
+				
+			</c:forEach>
+
 		</ul>
 		
 	</div>
+
+	<a id="write" href="/Vada/jsp/boardWriteForm.jsp">글 등록</a>
 	
 </main>
 
