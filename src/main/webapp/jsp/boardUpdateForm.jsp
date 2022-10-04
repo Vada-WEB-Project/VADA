@@ -20,7 +20,7 @@
 	pageContext.setAttribute("categoryDTOList", categoryDTOList);
 %>
 
-<jsp:include page="top.jsp" />
+<jsp:include page="top.jsp" />  
 
 <main>
 
