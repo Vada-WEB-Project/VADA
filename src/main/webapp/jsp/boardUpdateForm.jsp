@@ -13,7 +13,7 @@
 
 <%
 	request.setCharacterEncoding("utf-8");
-
+   
 	CategoryService categoryService = new CategoryListDAOImpl();
 	List<CategoryDTO> categoryDTOList = categoryService.listCategory();
 	
